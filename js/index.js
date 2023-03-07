@@ -37,7 +37,7 @@ function formValidation () {
     // +-----------+
     // Check if full name is not empty.
     if (fn.value) {
-        data.fn = fn.value;
+        data.fullName = fn.value;
     } else {
         errors.push("Please enter your full name!");
     }
@@ -57,7 +57,7 @@ function formValidation () {
     if (em.value) {
         // Conditional created to test if em.value is ok based on the pattern
             if(pattern.test(em.value)){
-                data.em = em.value;
+                data.email = em.value;
             // Else statement to push an error if the conditional is not met.
             } else {
                 errors.push("Invalid Email!");
@@ -74,7 +74,7 @@ function formValidation () {
     // +---------+
     // Check if message is not empty.
     if (msg.value) {
-        data.msg = msg.value
+        data.message = msg.value
     } else {
         errors.push("Please enter your message!")
     };
